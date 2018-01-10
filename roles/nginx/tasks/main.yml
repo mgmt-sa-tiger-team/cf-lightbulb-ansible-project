@@ -1,0 +1,7 @@
+---
+- name: Install Nginx
+  yum:
+    name: nginx
+    state: latest
+  notify: nginx service
+  

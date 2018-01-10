@@ -1,0 +1,30 @@
+---
+- name: Setup common
+  hosts: _managed_os_linux
+  tasks:
+  - include_role:
+      name: common
+
+- name: Setup NTP
+  hosts: _managed_os_linux
+  tasks:
+  - include_role:
+      name: ntp
+
+- name: Apache
+  hosts: _managed_linux_app_apache
+  tasks:
+  - include_role:
+      name: apache
+
+- name: Nginx
+  hosts: _managed_linux_app_nginx
+  tasks:
+  - include_role:
+      name: nginx
+
+- name: Run Security Hardening
+  hosts: _managed_compliance_basic
+  tasks:
+  - include_role:
+      name: compliance

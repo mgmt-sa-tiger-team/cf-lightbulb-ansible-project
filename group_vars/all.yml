@@ -1,0 +1,11 @@
+---
+sat6_ip: x.x.x.x
+sat6_fqdn: sat.example.com
+admin_user: admin
+organization: "default organization"
+location: "default"
+hostgroup: False
+updatehost: true
+activation_key: activation_key
+ipa_hostname: idm.example.com
+ipa_admin: admin

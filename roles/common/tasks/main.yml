@@ -1,0 +1,7 @@
+- name: add dns servers
+  lineinfile:
+    path: /etc/resolv.conf
+    line: "nameserver {{ item }}"
+  with_items:
+    - 8.8.8.8
+    - 8.8.4.4
