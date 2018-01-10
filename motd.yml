@@ -3,5 +3,6 @@
   hosts: _managed_os_linux
   vars:
     motd_ascii_art: "{{ motd_text }}"
-  roles:
-    - jtyr.motd
+  tasks:
+    - include_role:
+        name: motd
