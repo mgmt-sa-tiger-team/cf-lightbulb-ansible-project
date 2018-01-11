@@ -1,6 +1,7 @@
 ---
 - name: MOTD
   hosts: _managed_os_linux
+  become: yes
   vars:
     motd_ascii_art: "{{ motd_text }}"
   tasks:
